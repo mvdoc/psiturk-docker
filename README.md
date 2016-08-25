@@ -45,8 +45,11 @@ let you try the experiment.
 
 ## Data and experiments
 By default `docker-compose.yml` maps `./exp` in the host to `/psiturk` in the psiturk container.
-Thus, you can put any experiment into `./exp`, then cd into that within the container, and run
+Thus, you can put any experiment directory into `./exp`, then cd into that within the container, and run
 the psiturk shell.
+
+The global psiturk configuration file is in `./exp/.psiturkconfig`, and the env variable is set to point there 
+inside the container.
 
 Also, the mysql database is saved under `./data/db`, and the user and password can be changed
 by changing the environment variables in `docker-compose.yml` (remember to change the `database_url`
