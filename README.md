@@ -43,6 +43,8 @@ debug -p
 if your server is visible in the network, copying and pasting the URL on the browser should
 let you try the experiment.
 
+Note: to detach from the container **do not type `exit`**; this will kill the container (although it might restart automatically, it's not nice). Instead, press the sequence `ctrl+p ctrl+q` to detach.
+
 ## Data and experiments
 By default `docker-compose.yml` maps `./exp` in the host to `/psiturk` in the psiturk container.
 Thus, you can put any experiment directory into `./exp`, then cd into that within the container, and run
