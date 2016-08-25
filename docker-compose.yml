@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+     - "./data/db:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: psipsi
+      MYSQL_DATABASE: participants
+      MYSQL_USER: psiturk      
+      MYSQL_PASSWORD: psiturk
+
+  psiturk:
+    build: .
+    links:
+     - db
+    environment:
+      DB_MYSQL_USER: psiturk
+      DB_MYSQL_PASSWORD: psiturk
+    ports:
+     - "22362:22362"
+    volumes:
+     - ./exp:/psiturk
+    tty: true
+    stdin_open: true
+    restart: always
