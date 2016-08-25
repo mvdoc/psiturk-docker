@@ -4,12 +4,7 @@ MAINTAINER Matteo Visconti dOC <mvdoc.gr@dartmouth.edu>
 
 RUN apt-get update && apt-get install -y \
 	python-dev \
-	libncurses-dev \
-	python-pip \
-	python-mysqldb \
-	python-mysqldb-dbg \
-	python-sqlalchemy \
-	libmysqlclient-dev
+	python-pip
 
 RUN rm -rf /var/lib/apt/lists/*
 
@@ -19,12 +14,6 @@ setuptools \
 requests \
 mysql-python \
 psiturk 
-
-# Use an adhoc user to avoid using root
-RUN groupadd -r psiturk && \
-useradd -r -g psiturk psiturk
-
-USER psiturk
 
 WORKDIR /psiturk
 

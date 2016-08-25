@@ -12,6 +12,7 @@ organization_name = New Great University
 browser_exclude_rule = MSIE, mobile, tablet
 
 [Database Parameters]
+database_url = mysql://psiturk:psiturk@db:3306/participants 
 table_name = turkdemo
 
 [Server Parameters]
