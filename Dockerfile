@@ -4,6 +4,7 @@ MAINTAINER Matteo Visconti dOC <mvdoc.gr@dartmouth.edu>
 
 RUN apt-get update && apt-get install -y \
 	python-dev \
+	libmysqlclient-dev \
 	python-pip
 
 RUN rm -rf /var/lib/apt/lists/*
