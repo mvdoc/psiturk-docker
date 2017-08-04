@@ -1,9 +1,9 @@
 version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: mysql:latest
     volumes:
-     - "./data/db:/var/lib/mysql"
+     - ./data/db:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: psipsi
@@ -16,9 +16,14 @@ services:
     links:
      - db
     ports:
-     - "22362:22362"
+     - 22362:22362
     volumes:
      - ./exp:/psiturk
     tty: true
     stdin_open: true
     restart: always
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
