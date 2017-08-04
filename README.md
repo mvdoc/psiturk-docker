@@ -59,10 +59,6 @@ in the `config.txt` of the example if you do change it).
 
 ## Known issues
 
-If you know how to fix any of these, or find new issues, please let me know 
-
-- everything is run as root into the psiturk container; this is because exposing a host folder 
-with another user causes permission problems
 - if you run `server log` from the psiturk shell, it crashes miserably because psiturk wants
 xterm installed, but we're not installing it. If you do want to see the log, you can always
 log in the container and `cat` or `tail` the `server.log` file.
