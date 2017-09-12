@@ -25,6 +25,9 @@ debug = true
 login_username = examplename
 login_pw = examplepassword
 threads = auto
+# Change adserver_revproxy_host to www.location.of.your.revproxy.sans.protocol.com
+adserver_revproxy_host = 127.0.0.1
+adserver_revproxy_port = 80
 
 [Task Parameters]
 experiment_code_version = 1.0
