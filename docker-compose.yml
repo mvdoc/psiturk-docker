@@ -22,7 +22,7 @@ services:
       MYSQL_PASSWORD: psiturk
 
   psiturk:
-    build: .
+    image: mvdoc/psiturk-docker:latest
     volumes:
      - ./exp:/psiturk
     tty: true
